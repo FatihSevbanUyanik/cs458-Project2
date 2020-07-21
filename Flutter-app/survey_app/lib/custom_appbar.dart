@@ -19,6 +19,14 @@ class MyAppBar extends StatelessWidget {
       child: Row(
         // <Widget> is the type of items in the list.
         children: <Widget>[
+          IconButton(
+          icon: new Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(
+              context
+            );
+          },
+        ),
           // Expanded expands its child to fill the available space.
           Expanded(
             child: title,
