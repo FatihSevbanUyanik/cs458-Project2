@@ -120,7 +120,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                 // If the form is valid, display a snackbar. In the real world,
                 // you'd often call a server or save the information in a database.
 
-                Navigator.push(context, MaterialPageRoute(builder: (context) => PollPage2()));
+                Navigator.pushNamed(context, '/pollPage2');
 
                 //Scaffold.of(context)
                 //    .showSnackBar(SnackBar(content: Text('Processing Data')));

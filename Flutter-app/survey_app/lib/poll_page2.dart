@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'custom_appbar2.dart';
+import 'main.dart';
 
 class PollPage2 extends StatelessWidget {
   @override
@@ -73,7 +74,8 @@ class MyCustomFormState2 extends State<MyCustomForm2> {
                 // If the form is valid, display a snackbar. In the real world,
                 // you'd often call a server or save the information in a database.
 
-                Navigator.push(context, MaterialPageRoute(builder: (context) => PollPage2()));
+                Navigator.of(context)
+                    .pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
 
                 //Scaffold.of(context)
                 //    .showSnackBar(SnackBar(content: Text('Processing Data')));
