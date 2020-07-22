@@ -31,6 +31,10 @@ class MyHomeWidget extends StatelessWidget {
             Center(child: Image.asset("assets/images/corona-img-1.jpeg"),
             ),
             RaisedButton(
+              color: Colors.lightBlue,
+              disabledColor: Colors.blueGrey,
+              textColor: Colors.white,
+              splashColor: Colors.blueAccent,
               child: Text("Attend Corona Poll"),
               onPressed: (){navigateToPollPage(context);},
             )
