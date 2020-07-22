@@ -32,57 +32,63 @@ class MyCustomFormState2 extends State<MyCustomForm2> {
   @override
   Widget build(BuildContext context) {
     // Build a Form widget using the _formKey created above.
-    return Form(
-        key: _formKey,
-        child: Column(children: <Widget>[
-          // Add TextFormFields and RaisedButton here.
-          new Align(
-              alignment: Alignment.topLeft,
-              child: Container(
-                  child: Text(
-                    "What kind of changes did you experience after the corona pandemia?",
-                    style: TextStyle(
-                      color: Colors.indigo,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
+    return Center(
+        child: Container(
+            width: 280.0,
+            child: Align(
+                alignment: Alignment(-5, 0.5),
+                child: Form(
+                    key: _formKey,
+                    child: Column(children: <Widget>[
+                      // Add TextFormFields and RaisedButton here.
+                      new Align(
+                          alignment: Alignment.topLeft,
+                          child: Container(
+                              child: Text(
+                                "What kind of changes did you experience after the corona pandemia?",
+                                style: TextStyle(
+                                  color: Colors.indigo,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
 
-                    ),
-                  )
-              )
-          ),
+                                ),
+                              )
+                          )
+                      ),
 
-          TextFormField(
-            // The validator receives the text that the user has entered.
-            validator: (value) {
-              if (value.isEmpty) {
-                return 'Please fill this field';
-              }
-              return null;
-            },
-            textAlign: TextAlign.left,
-            keyboardType: TextInputType.multiline,
-            maxLines: 5,
-            decoration: InputDecoration(
-              hintText: 'Text',
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(2.0)),
-            ),
-          ),
-          RaisedButton(
-            onPressed: () {
-              // Validate returns true if the form is valid, otherwise false.
-              if (_formKey.currentState.validate()) {
-                // If the form is valid, display a snackbar. In the real world,
-                // you'd often call a server or save the information in a database.
+                      TextFormField(
+                        // The validator receives the text that the user has entered.
+                        validator: (value) {
+                          if (value.isEmpty) {
+                            return 'Please fill this field';
+                          }
+                          return null;
+                        },
+                        textAlign: TextAlign.left,
+                        keyboardType: TextInputType.multiline,
+                        maxLines: 5,
+                        decoration: InputDecoration(
+                          hintText: 'Text',
+                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(2.0)),
+                        ),
+                      ),
+                      RaisedButton(
+                        onPressed: () {
+                          // Validate returns true if the form is valid, otherwise false.
+                          if (_formKey.currentState.validate()) {
+                            // If the form is valid, display a snackbar. In the real world,
+                            // you'd often call a server or save the information in a database.
 
-                Navigator.of(context)
-                    .pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
+                            Navigator.of(context)
+                                .pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
 
-                //Scaffold.of(context)
-                //    .showSnackBar(SnackBar(content: Text('Processing Data')));
-              }
-            },
-            child: Text('SEND'),
-          )
-        ]));
+                            //Scaffold.of(context)
+                            //    .showSnackBar(SnackBar(content: Text('Processing Data')));
+                          }
+                        },
+                        child: Text('SEND'),
+                      )
+                    ])))));
+
   }
 }
