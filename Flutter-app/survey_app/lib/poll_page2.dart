@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'custom_appbar2.dart';
-import 'main.dart';
 
 class PollPage2 extends StatelessWidget {
   @override

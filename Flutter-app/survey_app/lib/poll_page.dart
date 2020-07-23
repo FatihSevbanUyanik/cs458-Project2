@@ -120,117 +120,141 @@ class MyCustomFormState extends State<MyCustomForm> {
   Widget build(BuildContext context) {
     // Build a Form widget using the _formKey created above.
     return Center(
-        child: Container(
-            width: 280.0,
-            child: Align(
-                alignment: Alignment(-5, 0.5),
-                child: Form(
-                    key: _formKey,
-                    child: Column(children: <Widget>[
-                      // Add TextFormFields and RaisedButton here.
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: new Align(
-                            alignment: Alignment.topLeft,
-                            child: Container(
-                                child: Text(
-                              "Poll Credentials",
-                              style: TextStyle(
-                                color: Colors.indigo,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ))),
+      child: Container(
+        width: 280.0,
+        child: Align(
+          alignment: Alignment(-5, 0.5),
+          child: Form(
+            key: _formKey,
+            child: Column(children: <Widget>[
+              // Add TextFormFields and RaisedButton here.
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: new Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                        child: Text(
+                      "Poll Credentials",
+                      style: TextStyle(
+                        color: Colors.indigo,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: new Align(
-                            alignment: Alignment.topLeft,
-                            child: Container(
-                                child: Text(
-                                  "Name&Surname",
-                                  style: TextStyle(
-                                    color: Colors.indigo,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ))),
+                    ))),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: new Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                        child: Text(
+                      "Name&Surname",
+                      style: TextStyle(
+                        color: Colors.indigo,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
                       ),
+                    ))),
+              ),
 
-                      TextFormField(
-                        decoration: InputDecoration(
-                          hintText: "Name&Surname",
-                          fillColor: Color.fromRGBO(0, 0, 0, 0),
-                          prefixIcon: Icon(Icons.alternate_email),
-                          border: new OutlineInputBorder(
-                            borderRadius: new BorderRadius.circular(5.0),
-                            borderSide:
-                                new BorderSide(color: Colors.transparent),
-                          ),
-                        ),
-                        // The validator receives the text that the user has entered.
-                        validator: (value) {
-                          if (value.isEmpty) {
-                            return 'Please fill this field';
-                          }
-                          return null;
-                        },
+              TextFormField(
+                decoration: InputDecoration(
+                  hintText: "Name&Surname",
+                  fillColor: Color.fromRGBO(0, 0, 0, 0),
+                  prefixIcon: Icon(Icons.alternate_email),
+                  border: new OutlineInputBorder(
+                    borderRadius: new BorderRadius.circular(5.0),
+                    borderSide: new BorderSide(color: Colors.transparent),
+                  ),
+                ),
+                // The validator receives the text that the user has entered.
+                validator: (value) {
+                  if (value.isEmpty) {
+                    return 'Please fill this field';
+                  }
+                  return null;
+                },
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: new Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                        child: Text(
+                      "Birth Date",
+                      style: TextStyle(
+                        color: Colors.indigo,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: new Align(
-                            alignment: Alignment.topLeft,
-                            child: Container(
-                                child: Text(
-                                  "Birth Date",
-                                  style: TextStyle(
-                                    color: Colors.indigo,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ))),
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          hintText: "31.12.2020",
-                          fillColor: Color.fromRGBO(0, 0, 0, 0),
-                          prefixIcon: Icon(Icons.calendar_today),
-                          border: new OutlineInputBorder(
-                            borderRadius: new BorderRadius.circular(5.0),
-                            borderSide:
-                                new BorderSide(color: Colors.transparent),
-                          ),
-                        ),
-                        // The validator receives the text that the user has entered.
-                        validator: (value) {
-                          if (value.isEmpty) {
-                            return 'Please fill this field';
-                          }
-                          return null;
-                        },
-                      ),
+                    ))),
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                  hintText: "DD.MM.YYYY",
+                  fillColor: Color.fromRGBO(0, 0, 0, 0),
+                  prefixIcon: Icon(Icons.calendar_today),
+                  border: new OutlineInputBorder(
+                    borderRadius: new BorderRadius.circular(5.0),
+                    borderSide: new BorderSide(color: Colors.transparent),
+                  ),
+                ),
+                // The validator receives the text that the user has entered.
+                validator: (value) {
+                  if (value.isEmpty) {
+                    return 'Please fill this field';
+                  }
+                  if(!isValidDate(value)){
+                    return "Please enter a valid date.";
+                  }
+                  return null;
+                },
+              ),
 
-                      DropdownItemsWidget("Gender", this.genders),
-                      DropdownItemsWidget("City", this.cities),
-                      RaisedButton(
-                        color: Colors.lightBlue,
-                        disabledColor: Colors.blueGrey,
-                        textColor: Colors.white,
-                        splashColor: Colors.blueAccent,
-                        onPressed: () {
-                          // Validate returns true if the form is valid, otherwise false.
-                          if (_formKey.currentState.validate()) {
-                            // If the form is valid, display a snackbar. In the real world,
-                            // you'd often call a server or save the information in a database.
+              DropdownItemsWidget("Gender", this.genders),
+              DropdownItemsWidget("City", this.cities),
+              RaisedButton(
+                color: Colors.lightBlue,
+                disabledColor: Colors.blueGrey,
+                textColor: Colors.white,
+                splashColor: Colors.blueAccent,
+                onPressed: () {
+                  // Validate returns true if the form is valid, otherwise false.
+                  if (_formKey.currentState.validate()) {
+                    // If the form is valid, display a snackbar. In the real world,
+                    // you'd often call a server or save the information in a database.
 
-                            Navigator.pushNamed(context, '/pollPage2');
+                    Navigator.pushNamed(context, '/pollPage2');
 
-                            //Scaffold.of(context)
-                            //    .showSnackBar(SnackBar(content: Text('Processing Data')));
-                          }
-                        },
-                        child: Text('Submit'),
-                      )
-                    ])))));
+                    //Scaffold.of(context)
+                    //    .showSnackBar(SnackBar(content: Text('Processing Data')));
+                  }
+                },
+                child: Text('Submit'),
+              )
+            ]),
+          ),
+        ),
+      ),
+    );
+  }
+
+  bool isValidDate(String value) {
+    Pattern pattern = r'^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$';
+    RegExp regex = new RegExp(pattern);
+    if (!regex.hasMatch(value))
+      return false;
+    else
+      return true;
+    //final date = DateTime.parse(input);
+    //final originalFormatString = toOriginalFormatString(date);
+    //return input == originalFormatString;
+  }
+
+  String toOriginalFormatString(DateTime dateTime) {
+    final d = dateTime.day.toString().padLeft(2, '0');
+    final m = dateTime.month.toString().padLeft(2, '0');
+    final y = dateTime.year.toString().padLeft(4, '0');
+    return "$d$m$y";
   }
 }
