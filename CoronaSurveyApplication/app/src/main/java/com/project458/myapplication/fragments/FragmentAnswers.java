@@ -19,9 +19,11 @@ import com.project458.myapplication.service.InterfaceData;
 import com.project458.myapplication.service.ServiceAnswers;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class FragmentAnswers extends Fragment implements InterfaceData {
 
@@ -60,6 +62,12 @@ public class FragmentAnswers extends Fragment implements InterfaceData {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rcvAnswers.setLayoutManager(linearLayoutManager);
+    }
+
+
+    @OnClick({R.id.btnBack})
+    public void back() {
+        Objects.requireNonNull(getActivity()).onBackPressed();
     }
 
 

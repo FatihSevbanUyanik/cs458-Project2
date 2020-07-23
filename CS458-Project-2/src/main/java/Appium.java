@@ -53,7 +53,7 @@ public class Appium {
 
     public static void sleep(int duration) {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(duration);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

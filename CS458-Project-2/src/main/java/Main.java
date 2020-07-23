@@ -1,4 +1,4 @@
-public class TestCalculator {
+public class Main {
 
     public static void main(String[] args) {
 
@@ -18,6 +18,19 @@ public class TestCalculator {
         TestRespondToPoll testRespondToPoll = new TestRespondToPoll();
         testRespondToPoll.testRespondToPoll();
 
+        TestWrongDate testWrongDate = new TestWrongDate();
+        testWrongDate.testWrongDate();
+
+        TestWrongCity testWrongCity = new TestWrongCity();
+        testWrongCity.testWrongCity();
+
+        TestEmptyNameAndText testEmptyNameAndText = new TestEmptyNameAndText();
+        testEmptyNameAndText.testEmptyNameAndText();
+
+        TestViewAnswers testViewAnswers = new TestViewAnswers();
+        testViewAnswers.testViewAnswers();
+
+        Appium.getDriver().closeApp();
     }
 
 }

@@ -1,6 +1,8 @@
 package com.project458.myapplication.fragments;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,6 +74,20 @@ public class FragmentPoll extends Fragment implements InterfaceData {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(Objects.requireNonNull(getContext()),
                 android.R.layout.simple_list_item_1, cities);
         etCity.setAdapter(adapter);
+
+        TextWatcher textWatcher = new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) { validateSendButton(); }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void afterTextChanged(Editable s) {}
+        };
+
+        etNameSurname.addTextChangedListener(textWatcher);
+        etBirthDate.addTextChangedListener(textWatcher);
+        etText.addTextChangedListener(textWatcher);
+        etCity.addTextChangedListener(textWatcher);
     }
 
 
@@ -91,6 +107,8 @@ public class FragmentPoll extends Fragment implements InterfaceData {
         else {
             tvErrorBirthDate.setVisibility(View.GONE);
         }
+
+        validateSendButton();
     }
 
 
@@ -109,8 +127,9 @@ public class FragmentPoll extends Fragment implements InterfaceData {
         }
         else {
             tvErrorNameSurname.setVisibility(View.GONE);
-            validateSendButton();
         }
+
+        validateSendButton();
     }
 
 
@@ -129,9 +148,11 @@ public class FragmentPoll extends Fragment implements InterfaceData {
         }
         else {
             tvErrorCity.setVisibility(View.GONE);
-            validateSendButton();
         }
+
+        validateSendButton();
     }
+
 
     private boolean isCity(String city) {
         for (String c: cities) {
@@ -157,19 +178,41 @@ public class FragmentPoll extends Fragment implements InterfaceData {
         }
         else {
             tvErrorText.setVisibility(View.GONE);
-            validateSendButton();
         }
+
+        validateSendButton();
     }
 
 
     public void validateSendButton() {
         String city = etCity.getText().toString();
+        String text = etText.getText().toString();
         String birthDate = etBirthDate.getText().toString();
         String nameSurname = etNameSurname.getText().toString();
         boolean isMale = radioButtonMale.isChecked();
         boolean isFemale = radioButtonFemale.isChecked();
 
-        if (city.length() > 0 && Util.isDateValid(birthDate) &&
+        if (isCity(city)) {
+            tvErrorCity.setVisibility(View.GONE);
+        }
+
+        if (Util.isDateValid(birthDate)) {
+            tvErrorBirthDate.setVisibility(View.GONE);
+        }
+
+        if (text.length() > 10) {
+            tvErrorText.setVisibility(View.GONE);
+        }
+
+        if (nameSurname.length() > 2) {
+            tvErrorNameSurname.setVisibility(View.GONE);
+        }
+
+        if (isFemale || isMale) {
+            tvErrorGender.setVisibility(View.GONE);
+        }
+
+        if (isCity(city) && Util.isDateValid(birthDate) && text.length() > 10 &&
                 nameSurname.length() > 2 && (isFemale || isMale)) {
             btnSend.setEnabled(true);
         }
@@ -208,6 +251,7 @@ public class FragmentPoll extends Fragment implements InterfaceData {
         Toast.makeText(getContext(), "Thank you for your answer.",
                 Toast.LENGTH_LONG).show();
     }
+
 
     @Override
     public void error(Object error) {

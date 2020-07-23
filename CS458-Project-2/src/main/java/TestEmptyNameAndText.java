@@ -1,9 +1,9 @@
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 
-public class TestRespondToPoll {
+public class TestEmptyNameAndText {
 
-    public void testRespondToPoll() {
+    public void testEmptyNameAndText() {
         // =================================
         // FRAGMENT ENTER
         // =================================
@@ -20,16 +20,23 @@ public class TestRespondToPoll {
         MobileElement etText = (MobileElement) Appium.getDriver().findElement(By.id("etText"));
         MobileElement radioButtonMale = (MobileElement) Appium.getDriver().findElement(By.id("radioButtonMale"));
         MobileElement radioButtonFemale = (MobileElement) Appium.getDriver().findElement(By.id("radioButtonFemale"));
-        MobileElement btnSend = (MobileElement) Appium.getDriver().findElement(By.id("btnProceed"));
+        MobileElement btnBack = (MobileElement) Appium.getDriver().findElement(By.id("btnBack"));
 
-        etNameSurname.setValue("Steve Jobs");
-        etBirthDate.setValue("09.08.2019");
-        etCity.setValue("Trabzon");
-        etText.setValue("Due to Corona, I would like to play kolbastı in my tomb.");
         radioButtonMale.click();
+        etText.click();
+        etNameSurname.click();
 
-        btnSend.click();
+        etCity.click();
+        etCity.setValue("Antalya");
+        Appium.getDriver().hideKeyboard();
+
+        etBirthDate.click();
+        etBirthDate.setValue("05.05.1996");
+        Appium.getDriver().hideKeyboard();
+
         Appium.sleep(3000);
+        btnBack.click();
+        Appium.sleep(1000);
     }
 
 }

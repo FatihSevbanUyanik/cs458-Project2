@@ -2,23 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="246527e6-9afb-4803-aa64-c8c26b590962" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/google-services.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/adapters/AdapterAnswers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/fragments/FragmentAnswers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/model/Answer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/utils/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/layout/fragment_answers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/layout/list_item_answer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestEmptyNameAndText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestViewAnswers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestWrongCity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestWrongDate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/fragments/FragmentCredentials.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/fragments/FragmentEnter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/fragments/FragmentEnter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Appium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Appium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TestCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TestRespondToPoll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestRespondToPoll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Appium.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Appium.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TestCalculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TestRespondToPoll.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestRespondToPoll.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/fragments/FragmentAnswers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/fragments/FragmentAnswers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/fragments/FragmentPoll.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/fragments/FragmentPoll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/utils/FragmentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/utils/FragmentManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/layout/fragment_credentials.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/layout/fragment_answers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/layout/fragment_answers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/layout/fragment_poll.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/layout/fragment_poll.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/layout/list_item_answer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/layout/list_item_answer.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +52,8 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
-    <configuration name="TestCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestCalculator" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="CS458-Project-2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -62,7 +61,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestCalculator" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -80,7 +79,7 @@
       <workItem from="1595173750747" duration="4624000" />
       <workItem from="1595251811310" duration="974000" />
       <workItem from="1595252813930" duration="10000" />
-      <workItem from="1595499478608" duration="2903000" />
+      <workItem from="1595499478608" duration="8736000" />
     </task>
     <servers />
   </component>
@@ -88,37 +87,37 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="182" key="#Project_Structure" timestamp="1595108854597">
+    <state x="552" y="182" key="#Project_Structure" timestamp="1595542675375">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="182" key="#Project_Structure/1920.103.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595108854597" />
+    <state x="552" y="182" key="#Project_Structure/1920.103.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595542675375" />
     <state x="765" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1595178209665">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="240" key="#com.intellij.ide.util.MemberChooser/1920.103.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595178209665" />
-    <state x="522" y="88" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595177780584">
+    <state x="522" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595544612801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="522" y="88" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.103.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595177780584" />
-    <state width="1877" height="315" key="GridCell.Tab.0.bottom" timestamp="1595252786541">
+    <state x="522" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.103.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595544612801" />
+    <state width="1877" height="250" key="GridCell.Tab.0.bottom" timestamp="1595548046865">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="315" key="GridCell.Tab.0.bottom/1920.103.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595252786541" />
+    <state width="1877" height="250" key="GridCell.Tab.0.bottom/1920.103.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595548046865" />
     <state width="1877" height="443" key="GridCell.Tab.0.bottom/1920.103.1920.1040/0.0.1920.1040@1920.103.1920.1040" timestamp="1595113327374" />
-    <state width="1877" height="315" key="GridCell.Tab.0.center" timestamp="1595252786541">
+    <state width="1877" height="250" key="GridCell.Tab.0.center" timestamp="1595548046865">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="315" key="GridCell.Tab.0.center/1920.103.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595252786541" />
+    <state width="1877" height="250" key="GridCell.Tab.0.center/1920.103.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595548046865" />
     <state width="1877" height="443" key="GridCell.Tab.0.center/1920.103.1920.1040/0.0.1920.1040@1920.103.1920.1040" timestamp="1595113327374" />
-    <state width="1877" height="315" key="GridCell.Tab.0.left" timestamp="1595252786541">
+    <state width="1877" height="250" key="GridCell.Tab.0.left" timestamp="1595548046865">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="315" key="GridCell.Tab.0.left/1920.103.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595252786541" />
+    <state width="1877" height="250" key="GridCell.Tab.0.left/1920.103.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595548046865" />
     <state width="1877" height="443" key="GridCell.Tab.0.left/1920.103.1920.1040/0.0.1920.1040@1920.103.1920.1040" timestamp="1595113327373" />
-    <state width="1877" height="315" key="GridCell.Tab.0.right" timestamp="1595252786541">
+    <state width="1877" height="250" key="GridCell.Tab.0.right" timestamp="1595548046865">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="315" key="GridCell.Tab.0.right/1920.103.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595252786541" />
+    <state width="1877" height="250" key="GridCell.Tab.0.right/1920.103.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595548046865" />
     <state width="1877" height="443" key="GridCell.Tab.0.right/1920.103.1920.1040/0.0.1920.1040@1920.103.1920.1040" timestamp="1595113327374" />
     <state x="668" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1595499483542">
       <screen x="0" y="0" width="1920" height="1040" />
