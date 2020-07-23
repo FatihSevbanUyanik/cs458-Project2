@@ -9,9 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.orhanobut.hawk.Hawk;
 import com.project458.myapplication.R;
-import com.project458.myapplication.utils.Constants;
 import com.project458.myapplication.utils.FragmentManagement;
 
 import butterknife.ButterKnife;
@@ -29,9 +27,14 @@ public class FragmentEnter extends Fragment {
 
     @OnClick({R.id.btnAttendPoll})
     public void directToCredentials() {
-        FragmentManagement.switchFragment(FragmentManagement.FRAGMENT_CREDENTIALS, R.id.containerFragment,
+        FragmentManagement.switchFragment(FragmentManagement.FRAGMENT_POLL, R.id.containerFragment,
                 getFragmentManager(), true);
     }
 
+    @OnClick({R.id.btnViewAnswers})
+    public void directToAnswers() {
+        FragmentManagement.switchFragment(FragmentManagement.FRAGMENT_ANSWERS, R.id.containerFragment,
+                getFragmentManager(), true);
+    }
 
 }

@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="246527e6-9afb-4803-aa64-c8c26b590962" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CS458-Project-2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/adapters/AdapterAnswers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/fragments/FragmentAnswers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/model/Answer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/utils/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/layout/fragment_answers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/layout/list_item_answer.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/CS458-Project-2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/fragments/FragmentCredentials.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/fragments/FragmentEnter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/fragments/FragmentEnter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/fragments/FragmentPoll.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/fragments/FragmentPoll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/utils/FragmentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/java/com/project458/myapplication/utils/FragmentManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/layout/fragment_credentials.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/layout/fragment_poll.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/layout/fragment_poll.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoronaSurveyApplication/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../CoronaSurveyApplication/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +80,7 @@
       <workItem from="1595173750747" duration="4624000" />
       <workItem from="1595251811310" duration="974000" />
       <workItem from="1595252813930" duration="10000" />
-      <workItem from="1595499478608" duration="1680000" />
+      <workItem from="1595499478608" duration="2903000" />
     </task>
     <servers />
   </component>

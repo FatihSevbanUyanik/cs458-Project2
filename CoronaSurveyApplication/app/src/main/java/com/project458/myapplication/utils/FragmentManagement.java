@@ -4,15 +4,15 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.project458.myapplication.fragments.FragmentAnswers;
 import com.project458.myapplication.fragments.FragmentEnter;
-import com.project458.myapplication.fragments.FragmentCredentials;
 import com.project458.myapplication.fragments.FragmentPoll;
 
 public class FragmentManagement {
 
     public static final String FRAGMENT_POLL = "FragmentPoll";
     public static final String FRAGMENT_ENTER = "FragmentEnter";
-    public static final String FRAGMENT_CREDENTIALS = "FragmentCredentials";
+    public static final String FRAGMENT_ANSWERS = "FragmentAnswers";
 
     public static void switchFragment(String fragmentName, int containerId, FragmentManager fragmentManager, boolean addToBackStack) {
         Fragment fragment;
@@ -21,11 +21,11 @@ public class FragmentManagement {
             case FRAGMENT_ENTER:
                 fragment = new FragmentEnter();
                 break;
-            case FRAGMENT_CREDENTIALS:
-                fragment = new FragmentCredentials();
-                break;
             case FRAGMENT_POLL:
                 fragment = new FragmentPoll();
+                break;
+            case FRAGMENT_ANSWERS:
+                fragment = new FragmentAnswers();
                 break;
             default:
                 return;
