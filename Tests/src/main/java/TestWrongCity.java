@@ -23,7 +23,7 @@ public class TestWrongCity {
         MobileElement btnBack = (MobileElement) Appium.getDriver().findElement(By.id("btnBack"));
 
         etNameSurname.click();
-        etNameSurname.setValue("Steve Jobs");
+        etNameSurname.setValue("Ahmet Uyanik");
         Appium.getDriver().hideKeyboard();
 
         etBirthDate.click();

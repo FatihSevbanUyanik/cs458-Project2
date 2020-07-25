@@ -20,6 +20,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.orhanobut.hawk.Hawk;
 import com.project458.myapplication.R;
 import com.project458.myapplication.model.Answer;
 import com.project458.myapplication.service.InterfaceData;
@@ -27,6 +28,7 @@ import com.project458.myapplication.service.ServiceAnswers;
 import com.project458.myapplication.utils.FragmentManagement;
 import com.project458.myapplication.utils.Util;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 import butterknife.BindView;
@@ -231,7 +233,13 @@ public class FragmentPoll extends Fragment implements InterfaceData {
         boolean isMale = radioButtonMale.isChecked();
         String gender = isMale ? "Male" : "Female";
         Answer answer = new Answer(nameSurname, birthDate, city, gender, text);
-        ServiceAnswers.createAnswer(this, answer);
+
+        ArrayList<String> alreadyAnsweredNames = Hawk.get("answeredNames");
+        if (alreadyAnsweredNames != null && alreadyAnsweredNames.contains(nameSurname)) {
+            Toast.makeText(getContext(), "Already Answered!", Toast.LENGTH_LONG).show();
+        } else {
+            ServiceAnswers.createAnswer(this, answer);
+        }
     }
 
 
@@ -243,6 +251,12 @@ public class FragmentPoll extends Fragment implements InterfaceData {
 
     @Override
     public void success(Object data) {
+        String nameSurname = etNameSurname.getText().toString().trim();
+        ArrayList<String> alreadyAnsweredNames = Hawk.get("answeredNames");
+        if (alreadyAnsweredNames == null) alreadyAnsweredNames = new ArrayList<>();
+        alreadyAnsweredNames.add(nameSurname);
+        Hawk.put("answeredNames", alreadyAnsweredNames);
+
         assert getFragmentManager() != null;
         FragmentManagement.clearBackStack(getFragmentManager());
         FragmentManagement.switchFragment(FragmentManagement.FRAGMENT_ENTER,

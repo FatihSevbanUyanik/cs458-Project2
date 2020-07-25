@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Hawk.init(getApplicationContext()).build();
+        Hawk.deleteAll();
         FragmentManagement.switchFragment(
                 FragmentManagement.FRAGMENT_ENTER,
                 R.id.containerFragment,

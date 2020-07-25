@@ -1,12 +1,13 @@
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 
-public class TestWrongDate {
+public class TestSqlInjection {
 
-    public void testWrongDate() {
+    public void testSqlInjection() {
         // =================================
         // FRAGMENT ENTER
         // =================================
+        Appium.sleep(2000);
         MobileElement btnAttendPoll = (MobileElement) Appium.getDriver().findElement(By.id("btnAttendPoll"));
         btnAttendPoll.click();
         Appium.sleep(2000);
@@ -20,29 +21,28 @@ public class TestWrongDate {
         MobileElement etText = (MobileElement) Appium.getDriver().findElement(By.id("etText"));
         MobileElement radioButtonMale = (MobileElement) Appium.getDriver().findElement(By.id("radioButtonMale"));
         MobileElement radioButtonFemale = (MobileElement) Appium.getDriver().findElement(By.id("radioButtonFemale"));
-        MobileElement btnBack = (MobileElement) Appium.getDriver().findElement(By.id("btnBack"));
+        MobileElement btnSend = (MobileElement) Appium.getDriver().findElement(By.id("btnProceed"));
 
         etNameSurname.click();
-        etNameSurname.setValue("Steve Jobs");
+        etNameSurname.setValue("Enes Merdane");
         Appium.getDriver().hideKeyboard();
 
         etBirthDate.click();
-        etBirthDate.setValue("Wrong Date");
+        etBirthDate.setValue("02.02.1996");
         Appium.getDriver().hideKeyboard();
 
         etCity.click();
-        etCity.setValue("Antalya");
+        etCity.setValue("Trabzon");
+        Appium.getDriver().hideKeyboard();
+
+        etText.click();
+        etText.setValue("SELECT * FROM Users WHERE Id = 8R7pF2z3g6efCYolrj9d");
         Appium.getDriver().hideKeyboard();
 
         radioButtonMale.click();
 
-        etText.click();
-        etText.setValue("Due to Corona, I would like to play kolbastı in my tomb.");
-        Appium.getDriver().hideKeyboard();
-
-        Appium.sleep(3000);
-        btnBack.click();
-        Appium.sleep(1000);
+        btnSend.click();
+        Appium.sleep(5000);
     }
 
 }

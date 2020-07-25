@@ -1,12 +1,13 @@
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 
-public class TestRespondToPoll {
+public class TestDuplicateAnswer {
 
-    public void testRespondToPoll() {
+    public void testDuplicateAnswer() {
         // =================================
         // FRAGMENT ENTER
         // =================================
+        Appium.sleep(2000);
         MobileElement btnAttendPoll = (MobileElement) Appium.getDriver().findElement(By.id("btnAttendPoll"));
         btnAttendPoll.click();
         Appium.sleep(2000);
@@ -21,15 +22,30 @@ public class TestRespondToPoll {
         MobileElement radioButtonMale = (MobileElement) Appium.getDriver().findElement(By.id("radioButtonMale"));
         MobileElement radioButtonFemale = (MobileElement) Appium.getDriver().findElement(By.id("radioButtonFemale"));
         MobileElement btnSend = (MobileElement) Appium.getDriver().findElement(By.id("btnProceed"));
+        MobileElement btnBack = (MobileElement) Appium.getDriver().findElement(By.id("btnBack"));
 
+        etNameSurname.click();
         etNameSurname.setValue("Steve Jobs");
-        etBirthDate.setValue("09.08.2019");
-        etCity.setValue("Trabzon");
-        etText.setValue("Due to Corona, I would like to play kolbastı in my tomb.");
-        radioButtonMale.click();
+        Appium.getDriver().hideKeyboard();
 
+        etBirthDate.click();
+        etBirthDate.setValue("02.02.1996");
+        Appium.getDriver().hideKeyboard();
+
+        etCity.click();
+        etCity.setValue("Trabzon");
+        Appium.getDriver().hideKeyboard();
+
+        etText.click();
+        etText.setValue("Due to Corona, I would like to play kolbastı in my tomb. What a disgusting disease.");
+        Appium.getDriver().hideKeyboard();
+
+        radioButtonMale.click();
         btnSend.click();
+
         Appium.sleep(3000);
+        btnBack.click();
+        Appium.sleep(1000);
     }
 
 }

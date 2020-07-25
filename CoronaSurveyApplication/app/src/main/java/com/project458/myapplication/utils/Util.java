@@ -16,7 +16,6 @@ public class Util {
             Date date = sdf.parse(dateToValidate);
             System.out.println(date);
         } catch (ParseException e) {
-            e.printStackTrace();
             return false;
         }
 
