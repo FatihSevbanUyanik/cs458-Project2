@@ -20,7 +20,7 @@
 https://docs.google.com/document/d/1YcNCFsJWG-gVXov5nJO8cYgJ0GG9GXIhdgKmS6bdNUo/edit?usp=sharing
 
 ## Group Members 
-Enes Merdane - CS- 21600946
-Fatih Sevban Uyanık - CS- 21602486
-Muhammed Musab Okşaş - CS- 21602984
-Selen Uysal - CS- 21702292
+- Enes Merdane - CS- 21600946
+- Fatih Sevban Uyanık - CS- 21602486
+- Muhammed Musab Okşaş - CS- 21602984
+- Selen Uysal - CS- 21702292
